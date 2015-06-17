@@ -57,3 +57,5 @@
 	{
 		echo "There was an error while trying to save the image";
 	}
+
+?>
