@@ -11,9 +11,14 @@
 	</head>
 
 	<body>
-		<?php
+	<?php
+
 		header("refresh: 1;");
-		echo '<img src="../images/webcam_stream.jpeg" alt = "webcam image" />';
-		?>
+		echo '<img src="../images/webcam_stream.jpeg" alt = "webcam image"    style="width:640px;height:480px;" >'
+
+	?>
+	
+		
+             
 	</body>
 </html>

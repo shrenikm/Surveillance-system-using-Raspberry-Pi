@@ -26,7 +26,7 @@ while cap.isOpened():
 	im = Image.fromarray(frame)
 
 	# We reduce the quality a bit to get more upload speed
-	im.save("webcam_stream.jpeg", quality = 30)
+	im.save("webcam_stream.jpeg", quality = 20)
 
 	# Request
 	f = {'image' : open('webcam_stream.jpeg', 'rb')}
