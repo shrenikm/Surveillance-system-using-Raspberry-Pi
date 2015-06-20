@@ -3,7 +3,11 @@ import numpy as np
 import requests
 import time
 import Image
-import StringIO
+import multiprocessing as mp
+
+def post_file(url):
+	f = {'image' : open('webcam_stream.jpeg', 'rb')}
+	req = requests.post(url, files = f)
 
 cap = cv2.VideoCapture(0)
 
@@ -11,11 +15,10 @@ cap = cv2.VideoCapture(0)
 url = "http://watchmeprintagain.webege.com/php_files/webcam_stream_read.php"
 
 # Now we continuously read the frames from the webcam for some time
-start = time.time()
-TIME_TO_READ =60
+start_time = time.time()
+TIME_TO_READ = 30
 
-tmpFile = StringIO.StringIO()
-
+count = 0
 while cap.isOpened():
 
 
@@ -30,24 +33,27 @@ while cap.isOpened():
 
 	# We reduce the quality a bit to get more upload speed
 	im.save("webcam_stream.jpeg", quality = 20)
-	
-	# im.save(tmpFile, 'JPEG')
 
 	# Request
-	f = {'image' : open('webcam_stream.jpeg', 'rb')}
+	
 
-	# f = {'image' : tmpFile}
-
-	req = requests.post(url, files = f)
+	ss = time.time()
+	pr = mp.Process(target = post_file, args=(url,))
+	pr.start()
 
 	print "This frame done"
-	print req.text
-
+	# print req.text
+	pr.join()
+	print time.time() - ss
+	count+=1
 	# Read images for the time specified
-	if time.time() - start >= TIME_TO_READ:
+	if time.time() - start_time >= TIME_TO_READ:
+		break
+
+	if cv2.waitKey(1) & 0xFF == ord('q'):
 		break
 
 print "done"
-
+print count
 cap.release()
 cv2.destroyAllWindows()
