@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name = "apptheme_blue">#007FD9</color>
+    <color name = "apptheme_black">#191919</color>
+    <color name = "white">#FFFFFF</color>
+    <color name = "apptheme_red">#b20000</color>
+    <color name = "progress_green_start">#1F7A1F</color>
+    <color name = "progress_green_end">#33cc33</color>
+    <color name = "text">#CCCCCC</color>
+</resources>

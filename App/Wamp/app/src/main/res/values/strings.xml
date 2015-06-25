@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Wamp</string>
+    <string name="action_settings">Settings</string>
+    <string name = "stop_button">STOP</string>
+    <string name = "watch_button">WATCH</string>
+    <string name = "reset_button">RESET</string>
+    <string name = "username">Username</string>
+    <string name = "password">Password</string>
+    <string name = "login_button">LOGIN</string>
+    <string name = "action_change_credentials">Change Username and Password</string>
+    <string name = "text_username_change">Enter the new Username</string>
+    <string name = "text_password_change">Enter the new Password</string>
+    <string name = "change_button">CHANGE</string>
+    <string name = "start_stream_button">START STREAM</string>
+    <string name = "stop_stream_button">STOP STREAM</string>
+
+</resources>

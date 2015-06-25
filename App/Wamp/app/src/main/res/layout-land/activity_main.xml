@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+              android:layout_height="fill_parent"
+              android:layout_width="fill_parent"
+              android:orientation="vertical"
+              android:background="@drawable/bg2">
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/watch_button"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_marginTop="20dp"
+        android:text="@string/watch_button"
+        android:background="@drawable/button_blue"
+        android:textColor="@color/white"
+        android:padding="3dp"
+        android:textSize="12sp"
+
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_marginTop = "20dp"
+        android:orientation = "horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stop_button"
+            android:layout_marginRight="15dp"
+            android:text="@string/stop_button"
+            android:background="@drawable/button_red"
+            android:textColor="@color/white"
+            android:padding="3dp"
+            android:textSize="12sp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reset_button"
+            android:layout_marginLeft="15dp"
+            android:text="@string/reset_button"
+            android:background="@drawable/button_red"
+            android:textColor="@color/white"
+            android:padding="3dp"
+            android:textSize="12sp"
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/start_stream_button"
+            android:layout_marginRight="15dp"
+            android:text="@string/start_stream_button"
+            android:background="@drawable/button_blue"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:textSize="12sp"
+
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stop_stream_button"
+            android:layout_marginLeft="15dp"
+            android:text="@string/stop_stream_button"
+            android:background="@drawable/button_blue"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:textSize="12sp"
+            />
+
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:background="@drawable/progress_green"
+        />
+
+
+
+</LinearLayout>
